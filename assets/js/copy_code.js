@@ -1,22 +1,15 @@
 // create element for copy button in code blocks
 var codeBlocks = document.querySelectorAll("pre");
 codeBlocks.forEach(function (codeBlock) {
-  if (
-    (codeBlock.querySelector("pre:not(.lineno)") || codeBlock.querySelector("code")) &&
-    codeBlock.querySelector("code:not(.language-chartjs)") &&
-    codeBlock.querySelector("code:not(.language-diff2html)") &&
-    codeBlock.querySelector("code:not(.language-echarts)") &&
-    codeBlock.querySelector("code:not(.language-geojson)") &&
-    codeBlock.querySelector("code:not(.language-mermaid)") &&
-    codeBlock.querySelector("code:not(.language-vega_lite)")
-  ) {
+  if (codeBlock.querySelector("pre:not(.lineno)") || codeBlock.querySelector("code")) {
     // create copy button
     var copyButton = document.createElement("button");
     copyButton.className = "copy";
     copyButton.type = "button";
     copyButton.ariaLabel = "Copy code to clipboard";
     copyButton.innerText = "Copy";
-    copyButton.innerHTML = '<i class="fa-solid fa-clipboard"></i>';
+    // copyButton.style.border='1px solid #1C1C1D';
+    // copyButton.innerHTML = '<i class="fas fa-clipboard"></i>';
 
     // get code from code block and copy to clipboard
     copyButton.addEventListener("click", function () {
@@ -33,12 +26,12 @@ codeBlocks.forEach(function (codeBlock) {
       }
       window.navigator.clipboard.writeText(code);
       copyButton.innerText = "Copied";
-      copyButton.innerHTML = '<i class="fa-solid fa-clipboard-check"></i>';
+      // copyButton.innerHTML = '<i class="fas fa-clipboard-check"></i>';
       var waitFor = 3000;
 
       setTimeout(function () {
         copyButton.innerText = "Copy";
-        copyButton.innerHTML = '<i class="fa-solid fa-clipboard"></i>';
+        // copyButton.innerHTML = '<i class="fas fa-clipboard"></i>';
       }, waitFor);
     });
 

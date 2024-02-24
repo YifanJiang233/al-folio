@@ -3,6 +3,7 @@
  ******************************************************************************/
 
 d-byline {
+  // border-bottom:0px !important;
   border-top-color: var(--global-divider-color) !important;
 }
 
@@ -47,9 +48,6 @@ d-article {
   }
   b i {
     display: inline;
-  }
-  blockquote {
-    border-left: 2px solid var(--global-theme-color) !important;
   }
 
   // Style taken from code blocks

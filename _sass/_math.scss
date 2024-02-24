@@ -1,0 +1,144 @@
+// long display equations
+.MathJax {
+  padding: 0.25em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 0 !important;
+  max-width: 100%;
+}
+
+// fix corrupted rendering on ios (only needed for mathjax v3)
+// mjx-container, mjx-container *, mjx-container *::before, mjx-container *::after {
+//     box-sizing: unset; /* or any value, really */
+// }
+// mjx-c::before {
+//     will-change: opacity;
+// }
+
+.thm {
+  display: block;
+  font-style: normal;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+}
+.thm:before {
+  content: "Theorem. ";
+  font-weight: 400;
+  font-style: normal;
+}
+.thm[text]:before {
+  content: "Theorem (" attr(text) ") ";
+}
+
+.cor {
+  display: block;
+  font-style: normal;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+}
+.cor:before {
+  content: "Corollary. ";
+  font-weight: 400;
+  font-style: normal;
+}
+.cor[text]:before {
+  content: "Corollary (" attr(text) ") ";
+}
+
+.lem {
+  display: block;
+  font-style: normal;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+}
+.lem:before {
+  content: "Lemma.";
+  font-weight: 400;
+  font-style: normal;
+}
+.lem[text]:before {
+  content: "Lemma (" attr(text) ") ";
+}
+
+.prop {
+  display: block;
+  font-style: normal;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+}
+.prop:before {
+  content: "Proposition.";
+  font-weight: 400;
+  font-style: normal;
+}
+.prop[text]:before {
+  content: "Proposition (" attr(text) ") ";
+}
+
+.proof {
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+}
+.proof:before {
+  content: "Proof.";
+  font-style: italic;
+}
+.proof:after {
+  content: "\25FB";
+  float: right;
+}
+.asmp {
+  display: block;
+  font-style: normal;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+}
+.asmp:before {
+  content: "Assumption.";
+  font-weight: 400;
+  font-style: normal;
+}
+.asmp[text]:before {
+  content: "Assumption (" attr(text) ") ";
+}
+.defn {
+  display: block;
+  font-style: normal;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+}
+.defn:before {
+  content: "Definition.";
+  font-weight: 400;
+  font-style: normal;
+}
+.defn[text]:before {
+  content: "Definition (" attr(text) ") ";
+}
+.box {
+  display: block;
+  font-style: normal;
+  border: solid 2px var(--global-text-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 12px 0;
+  text-align: justify;
+}
+.box[text]:before {
+  content: attr(text);
+  font-weight: 400;
+  font-style: normal;
+}

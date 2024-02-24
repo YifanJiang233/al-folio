@@ -1552,12 +1552,7 @@
               $export.R = 128; // real proto method for `library`
               module.exports = $export;
             },
-            {
-              "./_core": 10,
-              "./_ctx": 11,
-              "./_global": 16,
-              "./_hide": 17,
-            },
+            { "./_core": 10, "./_ctx": 11, "./_global": 16, "./_hide": 17 },
           ],
           15: [
             function (require, module, exports) {
@@ -1617,11 +1612,7 @@
                   );
                 });
             },
-            {
-              "./_descriptors": 12,
-              "./_dom-create": 13,
-              "./_fails": 15,
-            },
+            { "./_descriptors": 12, "./_dom-create": 13, "./_fails": 15 },
           ],
           19: [
             function (require, module, exports) {
@@ -1698,11 +1689,7 @@
               // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
               $export($export.S + $export.F * !require("./_descriptors"), "Object", { defineProperty: require("./_object-dp").f });
             },
-            {
-              "./_descriptors": 12,
-              "./_export": 14,
-              "./_object-dp": 20,
-            },
+            { "./_descriptors": 12, "./_export": 14, "./_object-dp": 20 },
           ],
           24: [
             function (require, module, exports) {
@@ -3735,10 +3722,7 @@
 
               module.exports = Settings;
             },
-            {
-              "./utils": 51,
-              "babel-runtime/helpers/classCallCheck": 4,
-            },
+            { "./utils": 51, "babel-runtime/helpers/classCallCheck": 4 },
           ],
           33: [
             function (require, module, exports) {
@@ -4200,10 +4184,7 @@
 
                     currPos = currPos + diff;
 
-                    children.push({
-                      type: "kern",
-                      size: size,
-                    });
+                    children.push({ type: "kern", size: size });
                     children.push(oldChildren[i]);
                   }
                 } else if (positionType === "top") {
@@ -4805,13 +4786,7 @@
                   // Rule 18b
                   subShift = Math.max(subShift, metrics.sub1, subm.height - 0.8 * metrics.xHeight);
 
-                  var vlistElem = [
-                    {
-                      type: "elem",
-                      elem: subm,
-                      marginRight: scriptspace,
-                    },
-                  ];
+                  var vlistElem = [{ type: "elem", elem: subm, marginRight: scriptspace }];
                   // Subscripts shouldn't be shifted by the base's italic correction.
                   // Account for that by shifting the subscript back the appropriate
                   // amount. Note we only do this when the base is a single symbol.
@@ -4824,18 +4799,7 @@
                   // Rule 18c, d
                   supShift = Math.max(supShift, minSupShift, supm.depth + 0.25 * metrics.xHeight);
 
-                  supsub = _buildCommon2.default.makeVList(
-                    [
-                      {
-                        type: "elem",
-                        elem: supm,
-                        marginRight: scriptspace,
-                      },
-                    ],
-                    "shift",
-                    -supShift,
-                    options
-                  );
+                  supsub = _buildCommon2.default.makeVList([{ type: "elem", elem: supm, marginRight: scriptspace }], "shift", -supShift, options);
                 } else {
                   supShift = Math.max(supShift, minSupShift, supm.depth + 0.25 * metrics.xHeight);
                   subShift = Math.max(subShift, metrics.sub2);
@@ -4947,16 +4911,8 @@
 
                   frac = _buildCommon2.default.makeVList(
                     [
-                      {
-                        type: "elem",
-                        elem: denomm,
-                        shift: denomShift,
-                      },
-                      {
-                        type: "elem",
-                        elem: numerm,
-                        shift: -numShift,
-                      },
+                      { type: "elem", elem: denomm, shift: denomShift },
+                      { type: "elem", elem: numerm, shift: -numShift },
                     ],
                     "individualShift",
                     null,
@@ -4978,21 +4934,9 @@
 
                   frac = _buildCommon2.default.makeVList(
                     [
-                      {
-                        type: "elem",
-                        elem: denomm,
-                        shift: denomShift,
-                      },
-                      {
-                        type: "elem",
-                        elem: rule,
-                        shift: midShift,
-                      },
-                      {
-                        type: "elem",
-                        elem: numerm,
-                        shift: -numShift,
-                      },
+                      { type: "elem", elem: denomm, shift: denomShift },
+                      { type: "elem", elem: rule, shift: midShift },
+                      { type: "elem", elem: numerm, shift: -numShift },
                     ],
                     "individualShift",
                     null,
@@ -5173,11 +5117,7 @@
                     var shift = row.pos - offset;
                     elem.depth = row.depth;
                     elem.height = row.height;
-                    col.push({
-                      type: "elem",
-                      elem: elem,
-                      shift: shift,
-                    });
+                    col.push({ type: "elem", elem: elem, shift: shift });
                   }
 
                   col = _buildCommon2.default.makeVList(col, "individualShift", null, options);
@@ -5341,19 +5281,9 @@
                           type: "kern",
                           size: options.fontMetrics().bigOpSpacing5,
                         },
-                        {
-                          type: "elem",
-                          elem: subm,
-                          marginLeft: -slant + "em",
-                        },
-                        {
-                          type: "kern",
-                          size: subKern,
-                        },
-                        {
-                          type: "elem",
-                          elem: base,
-                        },
+                        { type: "elem", elem: subm, marginLeft: -slant + "em" },
+                        { type: "kern", size: subKern },
+                        { type: "elem", elem: base },
                       ],
                       "top",
                       top,
@@ -5364,19 +5294,9 @@
 
                     finalGroup = _buildCommon2.default.makeVList(
                       [
-                        {
-                          type: "elem",
-                          elem: base,
-                        },
-                        {
-                          type: "kern",
-                          size: supKern,
-                        },
-                        {
-                          type: "elem",
-                          elem: supm,
-                          marginLeft: slant + "em",
-                        },
+                        { type: "elem", elem: base },
+                        { type: "kern", size: supKern },
+                        { type: "elem", elem: supm, marginLeft: slant + "em" },
                         {
                           type: "kern",
                           size: options.fontMetrics().bigOpSpacing5,
@@ -5400,28 +5320,11 @@
                           type: "kern",
                           size: options.fontMetrics().bigOpSpacing5,
                         },
-                        {
-                          type: "elem",
-                          elem: subm,
-                          marginLeft: -slant + "em",
-                        },
-                        {
-                          type: "kern",
-                          size: subKern,
-                        },
-                        {
-                          type: "elem",
-                          elem: base,
-                        },
-                        {
-                          type: "kern",
-                          size: supKern,
-                        },
-                        {
-                          type: "elem",
-                          elem: supm,
-                          marginLeft: slant + "em",
-                        },
+                        { type: "elem", elem: subm, marginLeft: -slant + "em" },
+                        { type: "kern", size: subKern },
+                        { type: "elem", elem: base },
+                        { type: "kern", size: supKern },
+                        { type: "elem", elem: supm, marginLeft: slant + "em" },
                         {
                           type: "kern",
                           size: options.fontMetrics().bigOpSpacing5,
@@ -5634,10 +5537,7 @@
                   body = _buildCommon2.default.makeVList(
                     [
                       { type: "elem", elem: inner },
-                      {
-                        type: "kern",
-                        size: -(inner.height + imgShift),
-                      },
+                      { type: "kern", size: -(inner.height + imgShift) },
                       { type: "elem", elem: img },
                       { type: "kern", size: ruleWidth },
                     ],
@@ -5954,14 +5854,8 @@
                   accentBody = _buildCommon2.default.makeVList(
                     [
                       { type: "elem", elem: body },
-                      {
-                        type: "kern",
-                        size: -clearance,
-                      },
-                      {
-                        type: "elem",
-                        elem: accentBody,
-                      },
+                      { type: "kern", size: -clearance },
+                      { type: "elem", elem: accentBody },
                     ],
                     "firstBaseline",
                     null,
@@ -5973,10 +5867,7 @@
                   accentBody = _buildCommon2.default.makeVList(
                     [
                       { type: "elem", elem: body },
-                      {
-                        type: "elem",
-                        elem: accentBody,
-                      },
+                      { type: "elem", elem: accentBody },
                     ],
                     "firstBaseline",
                     null,
@@ -6083,10 +5974,7 @@
                       [
                         { type: "elem", elem: vSpan },
                         { type: "kern", size: 0.2 },
-                        {
-                          type: "elem",
-                          elem: supSubGroup,
-                        },
+                        { type: "elem", elem: supSubGroup },
                       ],
                       "firstBaseline",
                       null,
@@ -6095,10 +5983,7 @@
                   } else {
                     vlist = _buildCommon2.default.makeVList(
                       [
-                        {
-                          type: "elem",
-                          elem: supSubGroup,
-                        },
+                        { type: "elem", elem: supSubGroup },
                         { type: "kern", size: 0.2 },
                         { type: "elem", elem: vSpan },
                       ],
@@ -6167,11 +6052,7 @@
                 var vlist = _buildCommon2.default.makeVList(
                   [
                     { type: "elem", elem: inner, shift: 0 },
-                    {
-                      type: "elem",
-                      elem: img,
-                      shift: imgShift,
-                    },
+                    { type: "elem", elem: img, shift: imgShift },
                   ],
                   "individualShift",
                   null,
@@ -6220,21 +6101,9 @@
                   var lowerShift = -options.fontMetrics().axisHeight + lowerGroup.height + arrowBody.height + 0.111;
                   vlist = _buildCommon2.default.makeVList(
                     [
-                      {
-                        type: "elem",
-                        elem: upperGroup,
-                        shift: upperShift,
-                      },
-                      {
-                        type: "elem",
-                        elem: arrowBody,
-                        shift: arrowShift,
-                      },
-                      {
-                        type: "elem",
-                        elem: lowerGroup,
-                        shift: lowerShift,
-                      },
+                      { type: "elem", elem: upperGroup, shift: upperShift },
+                      { type: "elem", elem: arrowBody, shift: arrowShift },
+                      { type: "elem", elem: lowerGroup, shift: lowerShift },
                     ],
                     "individualShift",
                     null,
@@ -6243,16 +6112,8 @@
                 } else {
                   vlist = _buildCommon2.default.makeVList(
                     [
-                      {
-                        type: "elem",
-                        elem: upperGroup,
-                        shift: upperShift,
-                      },
-                      {
-                        type: "elem",
-                        elem: arrowBody,
-                        shift: arrowShift,
-                      },
+                      { type: "elem", elem: upperGroup, shift: upperShift },
+                      { type: "elem", elem: arrowBody, shift: arrowShift },
                     ],
                     "individualShift",
                     null,
@@ -7628,14 +7489,8 @@
 
               // Delimiters that never stack try small delimiters and large delimiters only
               var stackNeverDelimiterSequence = [
-                {
-                  type: "small",
-                  style: _Style2.default.SCRIPTSCRIPT,
-                },
-                {
-                  type: "small",
-                  style: _Style2.default.SCRIPT,
-                },
+                { type: "small", style: _Style2.default.SCRIPTSCRIPT },
+                { type: "small", style: _Style2.default.SCRIPT },
                 { type: "small", style: _Style2.default.TEXT },
                 { type: "large", size: 1 },
                 { type: "large", size: 2 },
@@ -7645,14 +7500,8 @@
 
               // Delimiters that always stack try the small delimiters first, then stack
               var stackAlwaysDelimiterSequence = [
-                {
-                  type: "small",
-                  style: _Style2.default.SCRIPTSCRIPT,
-                },
-                {
-                  type: "small",
-                  style: _Style2.default.SCRIPT,
-                },
+                { type: "small", style: _Style2.default.SCRIPTSCRIPT },
+                { type: "small", style: _Style2.default.SCRIPT },
                 { type: "small", style: _Style2.default.TEXT },
                 { type: "stack" },
               ];
@@ -7660,14 +7509,8 @@
               // Delimiters that stack when large try the small and then large delimiters, and
               // stack afterwards
               var stackLargeDelimiterSequence = [
-                {
-                  type: "small",
-                  style: _Style2.default.SCRIPTSCRIPT,
-                },
-                {
-                  type: "small",
-                  style: _Style2.default.SCRIPT,
-                },
+                { type: "small", style: _Style2.default.SCRIPTSCRIPT },
+                { type: "small", style: _Style2.default.SCRIPT },
                 { type: "small", style: _Style2.default.TEXT },
                 { type: "large", size: 1 },
                 { type: "large", size: 2 },
@@ -11678,11 +11521,7 @@
                 }
               );
             },
-            {
-              "./ParseError": 29,
-              "./ParseNode": 30,
-              "./utils": 51,
-            },
+            { "./ParseError": 29, "./ParseNode": 30, "./utils": 51 },
           ],
           44: [
             function (require, module, exports) {
@@ -12342,11 +12181,7 @@
                 svgSpan: svgSpan,
               };
             },
-            {
-              "./buildCommon": 34,
-              "./mathMLTree": 45,
-              "./utils": 51,
-            },
+            { "./buildCommon": 34, "./mathMLTree": 45, "./utils": 51 },
           ],
           48: [
             function (require, module, exports) {
@@ -13548,9 +13383,7 @@
       needsCSS = true;
       console.warn(`Prerendering ${mathTags.length} math tags...`);
       for (const mathTag of mathTags) {
-        const localOptions = {
-          displayMode: mathTag.hasAttribute("block"),
-        };
+        const localOptions = { displayMode: mathTag.hasAttribute("block") };
         const options = Object.assign(localOptions, data.katex);
         const html = katex$2.renderToString(mathTag.textContent, options);
         const container = dom.createElement("span");
