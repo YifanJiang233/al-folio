@@ -17,6 +17,8 @@
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{$white-color};
   --global-underline-color: #{$grey-color};
+  --global-back-to-top-bg-color: #{$black-color};
+  --global-back-to-top-text-color: #{$white-color};
 
   .fa-sun {
     display: none;
@@ -32,6 +34,16 @@
   }
   .repo-img-dark {
     display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: $back-to-top-bottom;
+    right: $back-to-top-right;
+    height: $back-to-top-height;
+    width: $back-to-top-width;
+    z-index: $back-to-top-z-index;
   }
 }
 
@@ -49,6 +61,8 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
+  --global-back-to-top-bg-color: #{$white-color};
+  --global-back-to-top-text-color: #{$black-color};
   --global-underline-color: #{$white-color};
 
   .fa-sun {

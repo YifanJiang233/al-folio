@@ -36,3 +36,11 @@ $black-color: #000000 !default;
 // $code-bg-color-light:     rgba($purple-color, 0.05);
 $code-bg-color-light: rgba($grey-color, 0.1);
 $code-bg-color-dark: #2c3237 !default;
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 50px;
+$back-to-top-right: 50px;
+$back-to-top-diameter: 56px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
