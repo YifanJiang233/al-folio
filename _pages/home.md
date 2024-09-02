@@ -20,7 +20,7 @@ social: false # includes social icons at the bottom of the page
 
 Hi, all!
 
-I am Yifan Jiang (蒋亦凡), a third-year student in the Mathematics of Random Systems CDT.
+I am Yifan Jiang (蒋亦凡), a final year student in the Mathematics of Random Systems CDT.
 Before coming to Oxford, I studied as an undergraduate in Mathematics at Fudan University.
 I have a broad interest in stochastic analysis and its applications in finance and machine learning.
 
