@@ -2,9 +2,9 @@
 layout: default
 ---
 <!-- _layouts/cv.liquid -->
-<div id="my-container"></div>
+<div id="my-pdf"></div>
 
-<script src="../assets/js/pdfobject.js"></script>
+<script src="https://unpkg.com/pdfobject"></script>
 <script>
   var options = {
     height: '1000px',
@@ -19,5 +19,5 @@ layout: default
       navpanes: '0',
     },
   };
-  PDFObject.embed('../assets/pdf/Yifan_Jiang_CV.pdf', '#my-container', options);
+  PDFObject.embed('../assets/pdf/Yifan_Jiang_CV.pdf', '#my-pdf', options);
 </script>

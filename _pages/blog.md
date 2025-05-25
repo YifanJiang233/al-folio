@@ -44,6 +44,21 @@ pagination:
   </div>
   {% endif %}
 
+ {% if site.display_categories %}
+  <div class="tag-list">
+    <ul class="p-0 m-0">
+      {% for category in site.display_categories %}
+        <li>
+          <i class="fas fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
   <ul class="post-list">
     {% for post in paginator.posts %}
 
