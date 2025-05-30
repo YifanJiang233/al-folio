@@ -1,19 +1,49 @@
 ---
 ---
-@misc{JO24Sensitivity,
+
+@misc{jiang25transfer,
+  title = {A Transfer Principle for Computing the Adapted {{Wasserstein}} Distance between Stochastic Processes},
+  author = {Jiang, Yifan and Lim, Fang Rui},
+  year = {2025},
+  month = may,
+  number = {arXiv:2505.21337},
+  eprint = {2505.21337},
+  primaryclass = {math},
+  publisher = {arXiv},
+  abstract = {We propose a transfer principle to study the adapted 2-Wasserstein distance between stochastic processes. First, we obtain an explicit formula for the distance between real-valued mean-square continuous Gaussian processes by introducing the causal factorization as an infinite-dimensional analogue of the Cholesky decomposition for operators on Hilbert spaces. We discuss the existence and uniqueness of this causal factorization and link it to the canonical representation of Gaussian processes. As a byproduct, we characterize mean-square continuous Gaussian Volterra processes in terms of their natural filtrations. Moreover, for real-valued fractional stochastic differential equations, we show that the synchronous coupling between the driving fractional noises attains the adapted Wasserstein distance under some monotonicity conditions. Our results cover a wide class of stochastic processes which are neither Markov processes nor semi-martingales, including fractional Brownian motions and fractional Ornstein--Uhlenbeck processes.},
+  bibtex_show = {true},
+  arxiv = {2505.21337},
+}
+
+@misc{bai25Wasserstein,
+  title = {Wasserstein Distributional Adversarial Training for Deep Neural Networks},
+  author = {Bai, Xingjian and He, Guangyi and Jiang, Yifan and Obłój, Jan},
+  year = {2025},
+  month = feb,
+  number = {arXiv:2502.09352},
+  eprint = {2502.09352},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  abstract = {Design of adversarial attacks for deep neural networks, as well as methods of adversarial training against them, are subject of intense research. In this paper, we propose methods to train against distributional attack threats, extending the TRADES method used for pointwise attacks. Our approach leverages recent contributions and relies on sensitivity analysis for Wasserstein distributionally robust optimization problems. We introduce an efficient fine-tuning method which can be deployed on a previously trained model. We test our methods on a range of pre-trained models on RobustBench. These experimental results demonstrate the additional training enhances Wasserstein distributional robustness, while maintaining original levels of pointwise robustness, even for already very successful networks. The improvements are less marked for models pre-trained using huge synthetic datasets of 20-100M images. However, remarkably, sometimes our methods are still able to improve their performance even when trained using only the original training dataset (50k images).},
+  bibtex_show = {true},
+  arxiv = {2502.09352},
+}
+
+
+@misc{jiang25Sensitivity,
   title = {Sensitivity of Causal Distributionally Robust Optimization},
   author = {Jiang, Yifan and Obłój, Jan},
   year = {2024},
   month = aug,
   number = {arXiv:2408.17109},
   eprint = {2408.17109},
+  primaryclass = {math},
   publisher = {arXiv},
-  abstract = {We study the causal distributionally robust optimization (DRO) in both discrete- and continuous- time settings. The framework captures model uncertainty, with potential models penalized in function of their adapted Wasserstein distance to a given reference model. Strength of the penalty is controlled using a real-valued parameter, which is simply the radius of the uncertainty ball in the special case of an indicator penalty. Our main results derive the first-order sensitivity of the value of causal DRO with respect to the penalization parameter, i.e., we compute the sensitivity to model uncertainty. Moreover, we investigate the case where a martingale constraint is imposed on the underlying model, as is the case for pricing measures in mathematical finance. We introduce different scaling regimes, which allow us to obtain the continuous-time sensitivities as nontrivial limits of their discrete-time counterparts. We illustrate our results with examples.
-              <br />
-              Our proofs rely on novel methods. In particular, we introduce pathwise Malliavin derivative, which agree a.s. with its classical counterpart under the Wiener measure, and we extend the adjoint operator, the Skorokhod integral, to regular martingale integrators and show it satisfies a stochastic Fubini theorem.},
+  abstract ={We study the causal distributionally robust optimization (DRO) in both discrete- and continuous- time settings. The framework captures model uncertainty, with potential models penalized in function of their adapted Wasserstein distance to a given reference model. Strength of the penalty is controlled using a real-valued parameter which, in the special case of an indicator penalty, is simply the radius of the uncertainty ball. Our main results derive the first-order sensitivity of the value of causal DRO with respect to the penalization parameter, i.e., we compute the sensitivity to model uncertainty. Moreover, we investigate the case where a martingale constraint is imposed on the underlying model, as is the case for pricing measures in mathematical finance. We introduce different scaling regimes, which allow us to obtain the continuous-time sensitivities as nontrivial limits of their discrete-time counterparts. We illustrate our results with examples. The sensitivities are naturally expressed using optional projections of Malliavin derivatives. To establish our results we obtain several novel results which are of independent interest. In particular, we introduce pathwise Malliavin derivatives and show these extend the classical notion. We also establish a novel stochastic Fubini theorem.},
   bibtex_show = {true},
-  arxiv = {2408.17109}
+  arxiv = {2408.17109},
 }
+
 
 
 @misc{FJWY24Anytime,

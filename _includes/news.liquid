@@ -7,24 +7,26 @@
     {% else %}
       {% assign news_limit = news_size %}
     {% endif %}
-    <ol style="list-style-type: none; padding: 0;">
-      {% for item in news limit: news_limit %}
-        <li style="margin-top: 1rem;">
-          <div class="row">
-            <div class="col-sm-2" style="font-weight: bolder;">
-              {{ item.date | date: '%b %-d, %Y' }}
+    <div style="max-height: 30vh; overflow-x: hidden; overflow-y: auto;">
+      <ol style="list-style-type: none; padding: 0;">
+        {% for item in news limit: news_limit %}
+          <li style="margin-top: 1rem;">
+            <div class="row">
+              <div class="col-sm-2" style="font-weight: bolder;">
+                {{ item.date | date: '%b %-d, %Y' }}
+              </div>
+              <div class="col-sm-6">
+                {% if item.inline %}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </div>
             </div>
-            <div class="col-sm-6">
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </div>
-          </div>
-        </li>
-      {% endfor %}
-    </ol>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
   {% else %}
     <p>No news so far...</p>
   {% endif %}
