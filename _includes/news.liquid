@@ -2,12 +2,18 @@
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
     {% assign news = site.news | reverse %}
+
     {% if include.limit and site.announcements.limit %}
       {% assign news_limit = site.announcements.limit %}
     {% else %}
       {% assign news_limit = news_size %}
     {% endif %}
-    <div style="max-height: 30vh; overflow-x: hidden; overflow-y: auto;">
+
+    <div
+      {% if include.limit and site.announcements.limit %}
+        style="max-height: 30vh; overflow-x: hidden; overflow-y: auto;"
+      {% endif %}
+    >
       <ol style="list-style-type: none; padding: 0;">
         {% for item in news limit: news_limit %}
           <li style="margin-top: 1rem;">
